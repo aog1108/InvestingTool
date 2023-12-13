@@ -10,7 +10,7 @@ if True:  # noqa: E402
 
 class DataRetrieverTestCase(unittest.TestCase):
     def test_krx_stock_data_retrieve_all(self):
-        db_info = Db.FinancialDBInfo()
+        db_info = Db.FinancialDBInfo(Db.read_financial_db_info())
         db_object = Db.DBObject(db_info)
 
         data_retriever = DataRetriever(db_object)
@@ -24,7 +24,7 @@ class DataRetrieverTestCase(unittest.TestCase):
         self.assertIsInstance(data, pd.DataFrame)
 
     def test_krx_stock_data_retrieve_certain_tickers(self):
-        db_info = Db.FinancialDBInfo()
+        db_info = Db.FinancialDBInfo(Db.read_financial_db_info())
         db_object = Db.DBObject(db_info)
 
         data_retriever = DataRetriever(db_object)
@@ -38,7 +38,7 @@ class DataRetrieverTestCase(unittest.TestCase):
         self.assertIsInstance(data, pd.DataFrame)
 
     def test_krx_stock_data_retrieve_certain_tickers_and_columns(self):
-        db_info = Db.FinancialDBInfo()
+        db_info = Db.FinancialDBInfo(Db.read_financial_db_info())
         db_object = Db.DBObject(db_info)
 
         data_retriever = DataRetriever(db_object)

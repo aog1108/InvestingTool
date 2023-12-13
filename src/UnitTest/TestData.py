@@ -3,7 +3,7 @@ from DataRetriever import DataRetriever
 
 
 def get_test_data():
-    db_info = Db.FinancialDBInfo()
+    db_info = Db.FinancialDBInfo(Db.read_financial_db_info())
     db_object = Db.DBObject(db_info)
     data_retriever = DataRetriever(db_object)
 
@@ -18,7 +18,7 @@ def get_test_data():
 
 
 def get_test_data_all():
-    db_info = Db.FinancialDBInfo()
+    db_info = Db.FinancialDBInfo(Db.read_financial_db_info())
     db_object = Db.DBObject(db_info)
     data_retriever = DataRetriever(db_object)
 
