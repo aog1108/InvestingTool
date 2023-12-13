@@ -1,7 +1,7 @@
 import unittest
 import sys
 
-sys.path.append('C:/Users/JeonSeongHun/PycharmProjects/TechnicalBacktesting')
+sys.path.append('C:/Users/JeonSeongHun/PycharmProjects/InvestingTool')
 
 
 if True:  # noqa: E402

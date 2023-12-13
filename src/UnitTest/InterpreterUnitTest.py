@@ -1,7 +1,7 @@
 import unittest
 import sys
 
-sys.path.append('C:/Users/JeonSeongHun/PycharmProjects/TechnicalBacktesting')
+sys.path.append('C:/Users/JeonSeongHun/PycharmProjects/InvestingTool')
 
 if True:  # noqa: E402
     from Communication import *
@@ -12,7 +12,7 @@ class DataRetrieverTestCase(unittest.TestCase):
         simple_filter_json = convert_simple_filter_df(read_table_as_dataframe(ws, 'SimpleFilter'))
         compare_filter_json = convert_compare_filter_df(read_table_as_dataframe(ws, 'CompareFilter'))
         data = get_data_for_searching(simple_filter_json, compare_filter_json)
-        compare_results = get_compare_boolean_results(data, simple_filter_json, compare_filter_json)
+        compare_results = get_compare_boolean_arrayes(data, simple_filter_json, compare_filter_json)
         sq_text = read_sequence_text()
         parsed_sequence = parse_sequence_text(sq_text)
         ret = convert_parsed_sequence_to_expression(parsed_sequence, compare_results)
@@ -29,7 +29,7 @@ class DataRetrieverTestCase(unittest.TestCase):
         simple_filter_json = convert_simple_filter_df(read_table_as_dataframe(ws, 'SimpleFilter'))
         compare_filter_json = convert_compare_filter_df(read_table_as_dataframe(ws, 'CompareFilter'))
         data = get_data_for_searching(simple_filter_json, compare_filter_json)
-        compare_results = get_compare_boolean_results(data, simple_filter_json, compare_filter_json)
+        compare_results = get_compare_boolean_arrayes(data, simple_filter_json, compare_filter_json)
         sq_text = read_sequence_text()
         parsed_sequence = parse_sequence_text(sq_text)
         ret = convert_parsed_sequence_to_expression(parsed_sequence, compare_results)
